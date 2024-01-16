@@ -7,6 +7,7 @@ import { Home } from "./pages/Home";
 import { Contact } from "./pages/Contact";
 
 import "./index.css";
+import { PageNotFound } from "./pages/PageNotFound";
 
 const queryClient = new QueryClient();
 const router = createBrowserRouter([
@@ -17,6 +18,10 @@ const router = createBrowserRouter([
   {
     path: "/contact",
     element: <Contact />,
+  },
+  {
+    path: "*",
+    element: <PageNotFound />,
   },
 ]);
 
