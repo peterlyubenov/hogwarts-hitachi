@@ -85,7 +85,7 @@ export const Home = () => {
             Add house
           </button>
         </div>
-        <Table dataSource={tableData} columns={columns} />
+        <Table dataSource={tableData} columns={columns} scroll={{ x: 800 }} />
       </div>
       <AddHouseModal
         isOpen={isAddHouseModalOpen}
