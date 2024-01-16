@@ -1,5 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import { Layout as AntLayout, Menu } from "antd";
+import { GithubOutlined } from "@ant-design/icons";
 
 const { Header, Content, Footer } = AntLayout;
 
@@ -38,7 +39,17 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
       <Content className="min-h-[calc(100vh-133px)] px-4 lg:px-16 2xl:px-32 pt-8">
         {children}
       </Content>
-      <Footer>Footer</Footer>
+      <Footer>
+        No copyright -{" "}
+        <a
+          href="https://github.com/peterlyubenov/hogwarts-hitachi"
+          target="_blank"
+          className="text-primary"
+        >
+          <GithubOutlined className="mr-2" />
+          GitHub Project
+        </a>
+      </Footer>
     </AntLayout>
   );
 };
