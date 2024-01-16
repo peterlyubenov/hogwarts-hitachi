@@ -1,10 +1,12 @@
 import { Layout } from "../components/Layout";
 import corneliusImage from "../assets/Corneliushogwarts.jpg";
 import { Card } from "antd";
+import { useTitle } from "../hooks/useTitle";
 
 const { Meta } = Card;
 
 export const Contact = () => {
+  useTitle("Contact - Hogwarts Houses");
   return (
     <Layout>
       <div className="flex justify-center items-center">

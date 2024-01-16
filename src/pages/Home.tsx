@@ -6,6 +6,7 @@ import { Skeleton, Table, message } from "antd";
 import { PlusOutlined } from "@ant-design/icons";
 import { AddHouseModal } from "../components/AddHouseModal";
 import { HogwartsHouseTableRow } from "../queries/hogwarts.types";
+import { useTitle } from "../hooks/useTitle";
 
 const columns = [
   {
@@ -37,6 +38,8 @@ export const Home = () => {
   );
   const { data: houses, isLoading, isError, error } = useHogwartsHousesQuery();
   const [messageApi] = message.useMessage();
+
+  useTitle("Home - Hogwarts Houses");
 
   const tableData = useMemo(() => {
     const allHouses = [...(houses || []), ...localHouses];
